@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Travello</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/learning-journal-favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/learning-journal-favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/learning-journal-favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/learning-journal-favicon/site.webmanifest">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <li class='logo'><a href='index.html'><img src='images/data-science.png' class="logo-img"></a></li>
+                    <h1><a href='index.html'>Travello</a></h1>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="recent-posts.html">STRONA GŁÓWNA</a></li>
+                        <li><a href="about-me.html">OFERTA</a></li>
+                        <li><a href="about-me.html">ZAREZERWUJ</a></li>
+                        <li><a href="about-me.html">FAQ</a></li>
+                        <li><a href="about-me.html">KONTAKT</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav> 
+        </header>
+
+        <main>
+            <article class="featured-article">
+                <img class="featured-img" src="images\featured-image.jpg" alt="Post thumbnail">
+                <div class="featured">
+                </div>
+            </article>
+
+            <div class="posts container" id="posts-container">
+                <!-- other posts go here -->
+            </div>
+
+        </main>
+
+        <footer id="footer">
+            <h3>Travello</h3>
+            <h4 id="copyright-date"></h4>
+        </footer>
+
+        <script src="index.js" type="module"></script>
+
+    </body>
+</html>
