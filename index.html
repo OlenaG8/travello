@@ -53,85 +53,163 @@
 
         </main>
 
+        <!-- FORM -->
+        <div class="reservation-container">
+            <!-- Progress-bar -->
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1"></div>
+                <div class="progress-step" data-step="2"></div>
+                <div class="progress-step" data-step="3"></div>
+            </div>
+            <!-- Rezerwacje -->
+            <form id="reservationForm" class="step-form">
+                <!-- Krok 1 -->
+                <div class="form-step active" data-step="1">
+                    <h2>Rezerwacja - Krok 1 / 3</h2>
+
+                    <div class="form-group">
+                        <label for="firstName">Imię*</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Nazwisko*</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" placeholder="123">
+                    </div>
+                    
+                    <div class="form-group date-group">
+                        <label>Data urodzenia*</label>
+                        <div class="date-inputs">
+
+                            <select class="day-select" required>
+                                <option value="" disabled selected>Dzień</option>
+                            </select>
+
+                            <select class="month-select" required>
+                                <option value="" disabled selected>Miesiąc</option>
+                                <option value="1">Styczeń</option>
+                                <option value="2">Luty</option>
+                                <option value="3">Marzec</option>
+                                <option value="4">Kwiecień</option>
+                                <option value="5">Maj</option>
+                                <option value="6">Czerwiec</option>
+                                <option value="7">Lipiec</option>
+                                <option value="8">Sierpień</option>
+                                <option value="9">Wrzesień</option>
+                                <option value="10">Październik</option>
+                                <option value="11">Listopad</option>
+                                <option value="12">Grudzień</option>
+                            </select>
+
+                            <select class="year-select" required>
+                                <option value="" disabled selected>Rok</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="trip">Wycieczka*</label>
+                        <select id="trip" required>
+                            <option value="" disabled selected>Wybierz wycieczkę</option>
+                            <option value="austria">Austria, Hallstatt</option>
+                            <option value="italy">Włochy, Rzym</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="people">Ilość osób*</label>
+                        <input type="number" id="people" min="1" max="10" required>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="next-btn">Dalej →</button>
+                    </div>
+                </div>
+                
+                <!-- Krok 2 -->
+                <div class="form-step" data-step="2">
+                    <h2>Rezerwacja - Krok 2 / 3</h2>
+                    
+                    <div class="form-group">
+                        <label for="payment">Metoda płatności*</label>
+                        <select id="payment" required>
+                            <option value="" disabled selected>Wybierz metodę</option>
+                            <option value="card">Karta kredytowa</option>
+                            <option value="transfer">Przelew bankowy</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn">← Wstecz</button>
+                        <button type="button" class="next-btn">Dalej →</button>
+                    </div>
+                </div>
+
+                <!-- Krok 3 -->
+                <div class="form-step" data-step="3">
+                    <h2>Rezerwacja - Krok 3 / 3</h2>
+                    
+                    <div class="form-group">
+                        <label for="comments">Uwagi</label>
+                        <textarea id="comments" rows="4" placeholder="Tutaj możesz wpisać dodatkowe uwagi..."></textarea>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn">← Wstecz</button>
+                        <button type="submit" class="submit-btn">Zarezerwuj</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- FAQ -->
         <section class="faq-section">
             <div class="faq-container">
-              <h1 class="faq-main-title">Pomoc i FAQ</h1>
-              <div class="faq-accordion">
-
-                <!-- Pierwsze pytanie -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Muszę zmienić lub odwołać swoją rezerwację
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>Tutaj znajdziesz informacje o procesie zmiany lub odwołania rezerwacji...</p>
+                <h1 class="faq-main-title">Pomoc i FAQ</h1>
+                <div class="faq-accordion">
+                    <!-- Pierwsze pytanie -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Muszę zmienić lub odwołać swoją rezerwację
+                            <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tutaj znajdziesz informacje o procesie zmiany lub odwołania rezerwacji...</p>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Drugie pytanie -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Czy ceny zawierają podatki i opłaty?
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>Tutaj znajdziesz informacje o składnikach cen...</p>
+                    <!-- Drugie pytanie -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Czy ceny zawierają podatki i opłaty?
+                            <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tutaj znajdziesz informacje o składnikach cen...</p>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Trzecie pytanie -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Czy w cenach lotów są uwzględniane opłaty za bagaż?
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>W cenę biletu wliczony jest wyłącznie mały bagaż podręczny. Istnieje opcja rozszerzenia rezerwacji o dodatkowy bagaż.</p>
+                    <!-- Trzecie pytanie -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Czy w cenach lotów są uwzględniane opłaty za bagaż?
+                            <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
+                        </button>
+                        <div class="faq-answer">
+                            <p>W cenę biletu wliczony jest wyłącznie mały bagaż podręczny. Istnieje opcja rozszerzenia rezerwacji o dodatkowy bagaż.</p>
+                        </div>
                     </div>
+                    <!-- Alternatywnie więcej pytań jak potrzeba -->
                 </div>
-
-                <!-- Alternatywnie więcej pytań jak potrzeba -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Pomoc i FAQ
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>Pomoc i FAQ</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Pomoc i FAQ
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>Pomoc i FAQ</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Pomoc i FAQ
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>Pomoc i FAQ</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Pomoc i FAQ
-                        <img src="images/arrow-right.png" alt="rozwiń" class="faq-icon" data-icon-expanded="images/arrow-down.png" data-icon-collapsed="images/arrow-right.png">
-                    </button>
-                    <div class="faq-answer">
-                        <p>Pomoc i FAQ</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -175,7 +253,8 @@
           
         <script src="index.js" type="module"></script>
         <script src="libs/flickity.pkgd.js"></script>
-        <script src="faq.js"></script> <!-- skrypt od obracania strzałek w faq -->
+        <script src="faq.js"></script> <!-- skrypt do faq -->
+        <script src="form.js"></script> <!-- skrypt do formularza -->
 
     </body>
 </html>
