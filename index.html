@@ -9,10 +9,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <!-- Favicon -->
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" 
-        referrerpolicy="no-referrer" />
         <!-- CSS -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="libs/flickity.css" media="screen">
@@ -26,21 +22,21 @@
                     <li class='logo'><img src='images/airplane-logo.png' class="logo-img"></a></li>
                     <h1>Travello</a></h1>
                     <input type='checkbox' id='check' />
-                    <span class="menu">
-                        <li>STRONA GŁÓWNA</a></li> <!-- TODO jumping to sections -->
-                        <li>OFERTA</a></li>
-                        <li>ZAREZERWUJ</a></li>
-                        <li>FAQ</a></li>
-                        <li>KONTAKT</a></li>
+                    <ul class="menu">
+                        <li><a href="#main">STRONA GŁÓWNA</a></li>
+                        <li><a href="#posts-container">OFERTA</a></li>
+                        <li><a href="#formularz">ZAREZERWUJ</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#footer">KONTAKT</a></li>
                         <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-                    </span>
+                    </ul>
                     <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <article class="hero-section">
+            <article class="hero-section" id="main">
                 <img class="hero-img" src="images/hero-image.jpg" alt="Four cheering people with mountains in the background.">
                 <div class="hero">
                     <h2>Życie zaczyna się tam, gdzie kończy się strefa komfortu.</h2>
@@ -50,11 +46,10 @@
             <div class="gallery" id="posts-container" data-flickity='{"freeScroll": true, "wrapAround": true, "contain": true }'>
                 <!-- MAGIC HAPPENS HERE! -->
             </div>
-
         </main>
 
         <!-- FORM -->
-        <div class="reservation-container">
+        <div class="reservation-container" id="formularz">
             <!-- Progress-bar -->
             <div class="progress-bar">
                 <div class="progress-step active" data-step="1"></div>
@@ -123,7 +118,9 @@
                         <select id="trip" required>
                             <option value="" disabled selected>Wybierz wycieczkę</option>
                             <option value="austria">Austria, Hallstatt</option>
-                            <option value="italy">Włochy, Rzym</option>
+                            <option value="austria">Interlaken, Szwajcaria</option>
+                            <option value="austria">Innsbruck, Austria</option>
+                            <option value="italy">Cortina d’Ampezzo, Włochy</option>
                         </select>
                     </div>
                     
@@ -174,7 +171,7 @@
         </div>
 
         <!-- FAQ -->
-        <section class="faq-section">
+        <section class="faq-section" id="faq">
             <div class="faq-container">
                 <h1 class="faq-main-title">Pomoc i FAQ</h1>
                 <div class="faq-accordion">
@@ -219,17 +216,14 @@
             <div class="footer-top">
             
                 <div class="footer-contact">
-                    <p><strong>Dział obsługi klienta:</strong></p>
-                    <p>pn-pt:&nbsp;&nbsp;8:00-22:00</p>
-                    <p>sb-nd:&nbsp;&nbsp;9:00-20:00</p>
+                    <p class="footer-header"><strong>Dział obsługi klienta:</strong></p>
+                    <p class="footer-gray">pn-pt:&nbsp;&nbsp;8:00-22:00</p>
+                    <p class="footer-gray">sb-nd:&nbsp;&nbsp;9:00-20:00</p>
                 </div>
 
                 <div class="footer-contact">
-                    <p>Kontakt: 888-333-777</p>
-                </div>
-            
-                <div class="footer-contact">
-                    <p>E-mail: client.service@travello.com</p>
+                    <p class="footer-header">Kontakt: 888-333-777</p>
+                    <p class="footer-gray">E-mail: client.service@travello.com</p>
                 </div>
             
                 <div>
@@ -245,16 +239,17 @@
             <div class="footer-bottom">
                 <div class="footer-brand-wrapper">
                     <h3 class="footer-brand">Travello</h3>
-                    <h6 class="copyright-text">Copyright ©2025</h6>
+                    <h6 class="footer-gray">Copyright ©2025</h6>
                 </div>
             </div>
 
         </footer>
           
-        <script src="index.js" type="module"></script>
-        <script src="libs/flickity.pkgd.js"></script>
+        <script src="get_posts.js" type="module"></script> <!-- skrypt do importowania postów -->
+        <script src="libs/flickity.pkgd.js"></script> <!-- pakiet do przewijalnej animacji postów -->
         <script src="faq.js"></script> <!-- skrypt do faq -->
         <script src="form.js"></script> <!-- skrypt do formularza -->
+        <script src="https://kit.fontawesome.com/326fefc86d.js" crossorigin="anonymous"></script> <!-- skrypt do ikonek FontAwesome -->
 
     </body>
 </html>

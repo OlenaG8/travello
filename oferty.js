@@ -14,8 +14,9 @@ export const postsArray = [
         coverImg: "Hallstatt.jpg",
         googleMaps: "https://maps.app.goo.gl/WPqsnXirnbEXsSfL8",
         favicons: [
-            "fa-solid fa-plane-departure",
+            "fa-solid fa-bus",
             "fa-solid fa-utensils",
+            "fa-solid fa-shield-dog",
             "fa-solid fa-hotel"
         ]
     },
@@ -55,6 +56,7 @@ export const postsArray = [
         favicons: [
             "fa-solid fa-plane-departure",
             "fa-solid fa-utensils",
+            "fa-solid fa-camera",
             "fa-solid fa-hotel"
         ]
     },
@@ -72,8 +74,9 @@ export const postsArray = [
         coverImg: "Dolomites.jpg",
         googleMaps: "https://maps.app.goo.gl/y3SCCVpaGohjJ6qZ9",
         favicons: [
-            "fa-solid fa-plane-departure",
+            "fa-solid fa-bus",
             "fa-solid fa-utensils",
+            "fa-solid fa-shield-dog",
             "fa-solid fa-hotel"
         ]
     },
