@@ -3,14 +3,16 @@ import { postsArray } from './oferty.js'
 const copyrightDate = document.getElementById("copyright-date")
 const postsContainer = document.getElementById("posts-container")
 
+const fullscreen = document.getElementById("fullscreen")
+
 function getCurrentYear() {
 const date = new Date()
 copyrightDate.innerHTML = `Copyright ©${date.getFullYear()}`
 }
 
 function getPostHtml(card) {
-    const iconsHtml = card.favicons.map(iconClass => {
-        return `<i class="${iconClass}" title=""></i>`;
+    const iconsHtml = card.favicons.map(icon => {
+    return `<i class="${icon.className} tooltip" data-tooltip="${icon.tooltip}"></i>`;
     }).join('');
 
     const bestsellerBadge = card.bestseller 
@@ -19,9 +21,8 @@ function getPostHtml(card) {
 return `           
     <div class="gallery-cell">  
         <div class="trip-image-wrapper">
-            <img class="article-img" src="./images/${card.coverImg}" alt="Post thumbnail">  
-        </div> 
-        
+            <img class="article-img" id="mainImage${card.id}" src="./images/${card.coverImg}" alt="Post thumbnail">  
+        </div>
 
         <div class="trip-icons">
             ${iconsHtml}
@@ -48,13 +49,42 @@ return `
             <p class="article-preview">${card.description}</p>
             </div>
         </div>
-      
+    </div>
+    `
+}
+
+function getFullscreenHtml(card) {
+    return `    
+    <div id="overlay${card.id}" class="overlay">
+        <img src="./images/${card.coverImg}" alt="Pełny ekran" class="fullscreenImage" />
     </div>
     `
 }
 
 function render() {
-postsContainer.innerHTML += postsArray.map(getPostHtml).join('')
+    postsContainer.innerHTML += postsArray.map(getPostHtml).join('')
+}
+
+function render2() {
+    fullscreen.innerHTML += postsArray.map(getFullscreenHtml).join('')
 }
 
 render()
+render2()
+
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 1; i < 5; i++) {
+    const img = document.getElementById(`mainImage${i}`);
+    const overlay = document.getElementById(`overlay${i}`);
+
+    if (img && overlay) {
+      img.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+      });
+
+      overlay.addEventListener('click', () => {
+        overlay.style.display = 'none';
+      });
+    }
+  }
+});

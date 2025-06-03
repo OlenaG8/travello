@@ -14,10 +14,10 @@ export const postsArray = [
         coverImg: "Hallstatt.jpg",
         googleMaps: "https://maps.app.goo.gl/WPqsnXirnbEXsSfL8",
         favicons: [
-            "fa-solid fa-bus",
-            "fa-solid fa-utensils",
-            "fa-solid fa-shield-dog",
-            "fa-solid fa-hotel"
+            { className: "fa-solid fa-bus", tooltip: "Autokar w cenie" },
+            { className: "fa-solid fa-utensils", tooltip: "Wyżywienie wliczone" },
+            { className: "fa-solid fa-shield-dog", tooltip: "Przyjazne dla zwierząt" },
+            { className: "fa-solid fa-hotel", tooltip: "Zakwaterowanie wliczone" }
         ]
     },
     {
@@ -34,9 +34,9 @@ export const postsArray = [
         coverImg: "Interlaken-shipping-port.jpg",
         googleMaps: "https://maps.app.goo.gl/x1gMXczHLuYjrC4J6",
         favicons: [
-            "fa-solid fa-plane-departure",
-            "fa-solid fa-utensils",
-            "fa-solid fa-hotel"
+            "fa-solid fa-plane-departure tooltip",
+            { className: "fa-solid fa-utensils", tooltip: "Wyżywienie wliczone" },
+            { className: "fa-solid fa-hotel", tooltip: "Zakwaterowanie wliczone" }
         ]
     },
     {
@@ -54,10 +54,10 @@ export const postsArray = [
         coverImg: "Innsbruck.jpg",
         googleMaps: "https://maps.app.goo.gl/qEYtRR4EWnPeJbNt5",
         favicons: [
-            "fa-solid fa-plane-departure",
-            "fa-solid fa-utensils",
-            "fa-solid fa-camera",
-            "fa-solid fa-hotel"
+            { className: "fa-solid fa-plane-departure", tooltip: "Lot w cenie" },
+            { className: "fa-solid fa-utensils", tooltip: "Wyżywienie wliczone" },
+            { className: "fa-solid fa-camera", tooltip: "Profesjonalne zdjęcia w cenie" },
+            { className: "fa-solid fa-hotel", tooltip: "Zakwaterowanie wliczone" }
         ]
     },
     {
@@ -74,10 +74,10 @@ export const postsArray = [
         coverImg: "Dolomites.jpg",
         googleMaps: "https://maps.app.goo.gl/y3SCCVpaGohjJ6qZ9",
         favicons: [
-            "fa-solid fa-bus",
-            "fa-solid fa-utensils",
-            "fa-solid fa-shield-dog",
-            "fa-solid fa-hotel"
+            { className: "fa-solid fa-bus", tooltip: "Autokar w cenie" },
+            { className: "fa-solid fa-utensils", tooltip: "Wyżywienie wliczone" },
+            { className: "fa-solid fa-shield-dog", tooltip: "Przyjazne dla zwierząt" },
+            { className: "fa-solid fa-hotel", tooltip: "Zakwaterowanie wliczone" }
         ]
     },
 ]
